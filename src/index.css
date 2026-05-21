@@ -3,14 +3,14 @@
 @theme {
   --font-sans: "DM Sans", system-ui, sans-serif;
   --font-display: "Instrument Serif", Georgia, serif;
-  --color-navy-950: #050d1a;
+  --color-navy-950: #001529;
   --color-navy-900: #0c1f3d;
   --color-navy-800: #132d52;
   --color-navy-700: #1a3d6b;
-  --color-gold-500: #c9a227;
-  --color-gold-400: #d4b44a;
-  --color-gold-300: #e5cc7a;
-  --color-slate-150: #e8edf4;
+  --color-teal-600: #0d9488;
+  --color-teal-500: #14b8a6;
+  --color-teal-400: #2dd4bf;
+  --color-cyan-500: #06b6d4;
 }
 
 html {
@@ -18,9 +18,9 @@ html {
 }
 
 body {
-  @apply bg-navy-950 text-slate-150 font-sans antialiased;
+  @apply bg-white text-navy-900 font-sans antialiased;
 }
 
 ::selection {
-  @apply bg-gold-500/30 text-white;
+  @apply bg-teal-500/25 text-navy-950;
 }

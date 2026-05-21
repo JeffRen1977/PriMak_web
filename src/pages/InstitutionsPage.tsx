@@ -70,7 +70,7 @@ export default function InstitutionsPage() {
         compact
       />
 
-      <section className="border-y border-white/5 bg-navy-900/30 py-20">
+      <section className="border-y border-slate-200 bg-slate-50 py-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
             <div>
@@ -78,12 +78,12 @@ export default function InstitutionsPage() {
                 eyebrow="Private Investors"
                 title="Institutional quality for individual investors"
               />
-              <p className="mt-6 leading-relaxed text-slate-400">
+              <p className="mt-6 leading-relaxed text-slate-600">
                 Today&apos;s investors want more than just positive returns — digital
                 transformation, smarter data, more transparency, and faster service. We
                 help make these demands a reality.
               </p>
-              <p className="mt-4 leading-relaxed text-slate-400">
+              <p className="mt-4 leading-relaxed text-slate-600">
                 As a provider of private market solutions for individual investors, our
                 perpetual solutions bring institutional quality investments to individuals,
                 encompassing all private asset classes. With Partnership Enablement
@@ -92,12 +92,12 @@ export default function InstitutionsPage() {
                 institutions.
               </p>
             </div>
-            <div className="rounded-2xl border border-white/10 bg-navy-800/40 p-8">
-              <h3 className="text-xl font-semibold text-white">
+            <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
+              <h3 className="text-xl font-semibold text-navy-900">
                 Why Invest in Private Markets?
               </h3>
-              <p className="mt-2 text-gold-400 font-medium">Power Growth, Create Value</p>
-              <p className="mt-4 text-sm leading-relaxed text-slate-400">
+              <p className="mt-2 font-medium text-teal-600">Power Growth, Create Value</p>
+              <p className="mt-4 text-sm leading-relaxed text-slate-600">
                 Investing in private assets offers investors greater diversification and
                 the potential for enhanced long-term performance. With PriMarkA,
                 investors can access and participate in the $14T+ private markets — city
@@ -108,7 +108,7 @@ export default function InstitutionsPage() {
         </div>
       </section>
 
-      <section className="py-24">
+      <section className="bg-white py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <SectionHeading
             centered
@@ -119,11 +119,11 @@ export default function InstitutionsPage() {
             {audiences.map((a) => (
               <article
                 key={a.title}
-                className="rounded-2xl border border-white/8 bg-navy-900/50 p-8"
+                className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm"
               >
-                <h3 className="text-xl font-semibold text-white">{a.title}</h3>
-                <p className="mt-2 text-sm font-medium text-gold-400">{a.tagline}</p>
-                <p className="mt-4 text-sm leading-relaxed text-slate-400">
+                <h3 className="text-xl font-semibold text-navy-900">{a.title}</h3>
+                <p className="mt-2 text-sm font-medium text-teal-600">{a.tagline}</p>
+                <p className="mt-4 text-sm leading-relaxed text-slate-600">
                   {a.description}
                 </p>
               </article>
@@ -132,7 +132,7 @@ export default function InstitutionsPage() {
         </div>
       </section>
 
-      <section className="border-t border-white/5 bg-navy-900/40 py-24">
+      <section className="border-t border-slate-200 bg-slate-50 py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <SectionHeading
             eyebrow="Our Platform"
@@ -147,7 +147,7 @@ export default function InstitutionsPage() {
           <div className="mt-12 text-center">
             <Link
               to="/platform"
-              className="inline-flex rounded-lg bg-gold-500 px-6 py-3 text-sm font-semibold text-navy-950 hover:bg-gold-400"
+              className="inline-flex rounded-lg bg-gradient-to-r from-cyan-500 to-teal-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:from-cyan-400 hover:to-teal-500"
             >
               Explore Full Platform
             </Link>

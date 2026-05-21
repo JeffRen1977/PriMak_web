@@ -87,9 +87,9 @@ export default function PlatformPage() {
         compact
       />
 
-      <section className="border-y border-white/5 bg-navy-900/30 py-20">
+      <section className="border-y border-slate-200 bg-slate-50 py-20">
         <div className="mx-auto max-w-4xl px-6 text-center lg:px-8">
-          <p className="text-lg leading-relaxed text-slate-300">
+          <p className="text-lg leading-relaxed text-slate-700">
             The PriMarkA platform modernizes the investor journey with a single operating
             model that drives seamless, end-to-end workflows. By offering flexible access
             points on a unified platform, we eliminate manual bottlenecks and help you
@@ -103,7 +103,7 @@ export default function PlatformPage() {
         </div>
       </section>
 
-      <section className="py-24">
+      <section className="bg-white py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <SectionHeading
             centered
@@ -118,17 +118,17 @@ export default function PlatformPage() {
         </div>
       </section>
 
-      <section className="bg-gradient-to-b from-navy-900/60 to-navy-950 py-20">
+      <section className="bg-slate-50 py-20">
         <div className="mx-auto max-w-3xl px-6 text-center lg:px-8">
-          <h2 className="font-display text-3xl text-white">
+          <h2 className="font-display text-3xl text-navy-900">
             One secure platform. Total confidence.
           </h2>
-          <p className="mt-4 text-slate-400">
+          <p className="mt-4 text-slate-600">
             Manage your private investments with intelligent, unified data architecture.
           </p>
           <Link
             to="/contact"
-            className="mt-8 inline-flex rounded-lg bg-gold-500 px-6 py-3 text-sm font-semibold text-navy-950 hover:bg-gold-400"
+            className="mt-8 inline-flex rounded-lg bg-gradient-to-r from-cyan-500 to-teal-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:from-cyan-400 hover:to-teal-500"
           >
             Schedule a Demo
           </Link>
