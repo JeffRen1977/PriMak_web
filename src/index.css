@@ -2,7 +2,12 @@
 
 @theme {
   --font-sans: "DM Sans", system-ui, sans-serif;
-  --font-display: "Instrument Serif", Georgia, serif;
+  --font-display: "Space Grotesk", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --color-os-bg: #ffffff;
+  --color-os-surface: #f4f8fb;
+  --color-os-panel: #ffffff;
+  --color-os-border: #cbd5e1;
   --color-navy-950: #001529;
   --color-navy-900: #0c1f3d;
   --color-navy-800: #132d52;
@@ -11,6 +16,8 @@
   --color-teal-500: #14b8a6;
   --color-teal-400: #2dd4bf;
   --color-cyan-500: #06b6d4;
+  --color-cyan-400: #0891b2;
+  --color-signal: #059669;
 }
 
 html {
@@ -18,9 +25,121 @@ html {
 }
 
 body {
-  @apply bg-white text-navy-900 font-sans antialiased;
+  @apply bg-os-bg text-slate-700 font-sans antialiased;
 }
 
 ::selection {
-  @apply bg-teal-500/25 text-navy-950;
+  @apply bg-cyan-500/20 text-navy-950;
+}
+
+@layer components {
+  .cockpit-grid-bg {
+    background-image:
+      linear-gradient(rgba(0, 21, 41, 0.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 21, 41, 0.045) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  .cockpit-scanline {
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(6, 182, 212, 0.012) 2px,
+      rgba(6, 182, 212, 0.012) 4px
+    );
+  }
+
+  .cockpit-section {
+    @apply relative py-20 lg:py-24;
+  }
+
+  .cockpit-section-alt {
+    @apply border-y border-slate-200/80 bg-os-surface;
+  }
+
+  .cockpit-eyebrow {
+    @apply font-mono text-[11px] font-medium uppercase tracking-[0.2em] text-teal-600;
+  }
+
+  .cockpit-eyebrow::before {
+    content: "// ";
+    @apply text-teal-500/60;
+  }
+
+  .cockpit-title {
+    @apply font-display text-3xl font-semibold tracking-tight text-navy-950 sm:text-4xl;
+  }
+
+  .cockpit-title-xl {
+    @apply font-display text-4xl font-semibold leading-[1.1] tracking-tight text-navy-950 sm:text-5xl lg:text-6xl;
+  }
+
+  .cockpit-body {
+    @apply leading-relaxed text-slate-600;
+  }
+
+  .cockpit-panel {
+    @apply relative border border-slate-200 bg-os-panel shadow-sm;
+  }
+
+  .cockpit-panel::before,
+  .cockpit-panel::after {
+    content: "";
+    @apply pointer-events-none absolute h-3 w-3 border-teal-500/35;
+  }
+
+  .cockpit-panel::before {
+    @apply left-0 top-0 border-l border-t;
+  }
+
+  .cockpit-panel::after {
+    @apply bottom-0 right-0 border-b border-r;
+  }
+
+  .cockpit-panel-label {
+    @apply border-b border-slate-200 bg-slate-50 px-4 py-2 font-mono text-[10px] uppercase tracking-widest text-teal-700/90;
+  }
+
+  .btn-cockpit-primary {
+    @apply inline-flex items-center justify-center border border-teal-600/30 bg-gradient-to-r from-cyan-600 to-teal-600 px-6 py-2.5 font-mono text-xs font-semibold uppercase tracking-wider text-white shadow-md shadow-cyan-500/15 transition hover:from-cyan-500 hover:to-teal-500 hover:shadow-lg hover:shadow-cyan-500/25;
+  }
+
+  .btn-cockpit-ghost {
+    @apply inline-flex items-center justify-center border border-slate-300 bg-white px-6 py-2.5 font-mono text-xs font-medium uppercase tracking-wider text-navy-900 transition hover:border-teal-500/50 hover:bg-teal-50 hover:text-teal-800;
+  }
+
+  .cockpit-nav-link {
+    @apply px-3 py-2 font-mono text-[11px] uppercase tracking-wider text-slate-600 transition hover:text-teal-700;
+  }
+
+  .cockpit-nav-link-active {
+    @apply border border-teal-500/25 bg-teal-50 text-teal-800;
+  }
+
+  .cockpit-glow-text {
+    text-shadow: none;
+  }
+
+  .cockpit-divider {
+    @apply h-px w-full bg-gradient-to-r from-transparent via-teal-500/25 to-transparent;
+  }
+
+  .cockpit-inset {
+    @apply border border-slate-200 bg-slate-50;
+  }
+}
+
+@keyframes pulse-signal {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.45;
+  }
+}
+
+.signal-dot {
+  animation: pulse-signal 2s ease-in-out infinite;
 }

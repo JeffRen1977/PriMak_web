@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Hero from "../components/Hero";
 import FeatureCard from "../components/FeatureCard";
 import SectionHeading from "../components/SectionHeading";
+import Panel from "../components/Panel";
 import { IconChart, IconCpu, IconEye, IconGlobe } from "../components/icons";
 
 const features = [
@@ -35,84 +36,76 @@ export default function HomePage() {
   return (
     <>
       <Hero
-        eyebrow="Alternative Investments"
+        eyebrow="SYS::ALTERNATIVE_INVESTMENTS"
         title="PriMarkA is the Home of Opportunities — the Gateway to Emerging Assets"
-        subtitle="A unified investment platform for better private capital with curated access to proven private companies. We deploy intelligence. You invest."
-        primaryCta={{ label: "Get Early Access", to: "/contact" }}
+        subtitle="The private capital operating system. Curated access to proven private companies. We deploy intelligence. You invest."
+        primaryCta={{ label: "Initialize Access", to: "/contact" }}
         secondaryCta={{ label: "Explore Platform", to: "/platform" }}
+        showDashboard
       />
 
-      <section className="border-y border-slate-200 bg-slate-50 py-20">
+      <section className="cockpit-section cockpit-section-alt">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             <div>
-              <p className="text-sm font-semibold uppercase tracking-widest text-teal-600">
-                We Deploy Intelligence. You Invest.
-              </p>
-              <h2 className="mt-4 font-display text-3xl text-navy-900 sm:text-4xl">
+              <p className="cockpit-eyebrow">Deploy Intelligence · You Invest</p>
+              <h2 className="cockpit-title mt-4">
                 Curated access to private market opportunities
               </h2>
-              <p className="mt-6 leading-relaxed text-slate-600">
+              <p className="cockpit-body mt-6">
                 Providing eligible private investors with curated access to private market
                 opportunities designed to enhance portfolios and drive long-term growth
                 across companies.
               </p>
-              <p className="mt-4 leading-relaxed text-slate-600">
+              <p className="cockpit-body mt-4">
                 Today, more companies choose to remain private longer—leveraging tailored
                 growth strategies and operational flexibility. That growing demand and
                 complexity in private markets calls for a new era of alternatives to
                 overcome long-standing hurdles for investors.
               </p>
             </div>
-            <div className="rounded-2xl border border-teal-500/20 bg-white p-8 shadow-md lg:p-10">
-              <p className="text-lg font-medium text-teal-700">
+            <Panel label="ACCESS::EARLY_ENTRY" bodyClassName="p-6 lg:p-8">
+              <p className="font-display text-lg font-medium text-teal-700">
                 Get Early Access To Tomorrow&apos;s Market Leaders
               </p>
-              <p className="mt-4 text-sm leading-relaxed text-slate-600">
+              <p className="cockpit-body mt-4 text-sm">
                 Our platform unifies companies, asset managers, asset owners, and asset
                 servicers through a single intelligent private-market ecosystem for
                 tomorrow&apos;s alternatives.
               </p>
-              <Link
-                to="/contact"
-                className="mt-6 inline-flex rounded-lg bg-gradient-to-r from-cyan-500 to-teal-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:from-cyan-400 hover:to-teal-500"
-              >
-                Request Early Access
+              <Link to="/contact" className="btn-cockpit-primary mt-6">
+                Request Access
               </Link>
-            </div>
+            </Panel>
           </div>
         </div>
       </section>
 
-      <section className="bg-white py-24">
+      <section className="cockpit-section">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <SectionHeading
             centered
-            eyebrow="Why PriMarkA"
+            eyebrow="SYS::CAPABILITIES"
             title="Built for the new era of private markets"
             subtitle="Intelligent infrastructure that connects every participant in the private capital ecosystem."
           />
-          <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {features.map((f) => (
-              <FeatureCard key={f.title} {...f} />
+          <div className="mt-16 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {features.map((f, i) => (
+              <FeatureCard key={f.title} {...f} index={i} />
             ))}
           </div>
         </div>
       </section>
 
-      <section className="bg-slate-50 py-20">
+      <section className="cockpit-section cockpit-section-alt">
         <div className="mx-auto max-w-4xl px-6 text-center lg:px-8">
-          <h2 className="font-display text-3xl text-navy-900">
-            Ready to access tomorrow&apos;s market leaders?
-          </h2>
-          <p className="mt-4 text-slate-600">
-            Join the unified platform connecting intelligence, capital, and opportunity.
+          <h2 className="cockpit-title">Ready to access tomorrow&apos;s market leaders?</h2>
+          <p className="cockpit-body mt-4">
+            Initialize your connection to the unified platform — intelligence, capital, and
+            opportunity in one operating system.
           </p>
-          <Link
-            to="/institutions"
-            className="mt-8 inline-flex rounded-lg border border-slate-300 px-6 py-3 text-sm font-medium text-navy-900 hover:border-teal-500 hover:bg-white"
-          >
-            For Institutions →
+          <Link to="/institutions" className="btn-cockpit-ghost mt-8">
+            INS · Institutions →
           </Link>
         </div>
       </section>

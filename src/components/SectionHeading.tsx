@@ -12,18 +12,11 @@ export default function SectionHeading({
   centered,
 }: SectionHeadingProps) {
   return (
-    <div className={centered ? "mx-auto max-w-3xl text-center" : "max-w-3xl"}>
-      {eyebrow && (
-        <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-teal-600">
-          {eyebrow}
-        </p>
-      )}
-      <h2 className="font-display text-3xl text-navy-900 sm:text-4xl">{title}</h2>
-      {subtitle && (
-        <p className="mt-4 text-base leading-relaxed text-slate-600 lg:text-lg">
-          {subtitle}
-        </p>
-      )}
-    </div>
+    <header className={centered ? "mx-auto max-w-3xl text-center" : "max-w-3xl"}>
+      {eyebrow && <p className="cockpit-eyebrow mb-3">{eyebrow}</p>}
+      <h2 className="cockpit-title">{title}</h2>
+      {subtitle && <p className="cockpit-body mt-4 text-base lg:text-lg">{subtitle}</p>}
+      <div className={`cockpit-divider mt-6 ${centered ? "mx-auto max-w-xs" : "max-w-xs"}`} />
+    </header>
   );
 }

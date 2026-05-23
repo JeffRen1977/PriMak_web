@@ -80,57 +80,52 @@ export default function PlatformPage() {
   return (
     <>
       <Hero
-        eyebrow="Platform"
+        eyebrow="SYS::PLATFORM"
         title="A One-Stop Private Markets Platform, Built to Scale With Intelligence"
-        subtitle="A unified platform for better private capital that connects institutional investors, asset managers, asset owners, and asset servicers intelligently."
-        primaryCta={{ label: "Get In Touch", to: "/contact" }}
+        subtitle="The PriMarkA operating system — connecting institutional investors, asset managers, asset owners, and asset servicers through one unified command layer."
+        primaryCta={{ label: "Connect", to: "/contact" }}
         compact
       />
 
-      <section className="border-y border-slate-200 bg-slate-50 py-20">
+      <section className="cockpit-section cockpit-section-alt">
         <div className="mx-auto max-w-4xl px-6 text-center lg:px-8">
-          <p className="text-lg leading-relaxed text-slate-700">
+          <p className="cockpit-body text-lg">
             The PriMarkA platform modernizes the investor journey with a single operating
             model that drives seamless, end-to-end workflows. By offering flexible access
             points on a unified platform, we eliminate manual bottlenecks and help you
             scale operations to drive strategic growth.
           </p>
-          <p className="mt-6 text-sm text-slate-500">
-            Built for and by leading financial reasoning — designed and trained with the
-            sophistication of bankers, investors, and AI researchers to accelerate firm
-            productivity, automate workflows, and unify financial data at scale.
+          <p className="mt-6 font-mono text-xs uppercase tracking-wider text-slate-500">
+            Built for and by leading financial reasoning — designed with the sophistication
+            of bankers, investors, and AI researchers to accelerate firm productivity,
+            automate workflows, and unify financial data at scale.
           </p>
         </div>
       </section>
 
-      <section className="bg-white py-24">
+      <section className="cockpit-section">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <SectionHeading
             centered
-            eyebrow="Capabilities"
+            eyebrow="Core Modules"
             title="Everything you need across the private markets lifecycle"
           />
-          <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {capabilities.map((c) => (
-              <FeatureCard key={c.title} {...c} />
+          <div className="mt-16 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {capabilities.map((c, i) => (
+              <FeatureCard key={c.title} {...c} index={i} />
             ))}
           </div>
         </div>
       </section>
 
-      <section className="bg-slate-50 py-20">
+      <section className="cockpit-section cockpit-section-alt">
         <div className="mx-auto max-w-3xl px-6 text-center lg:px-8">
-          <h2 className="font-display text-3xl text-navy-900">
-            One secure platform. Total confidence.
-          </h2>
-          <p className="mt-4 text-slate-600">
+          <h2 className="cockpit-title">One secure platform. Total confidence.</h2>
+          <p className="cockpit-body mt-4">
             Manage your private investments with intelligent, unified data architecture.
           </p>
-          <Link
-            to="/contact"
-            className="mt-8 inline-flex rounded-lg bg-gradient-to-r from-cyan-500 to-teal-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:from-cyan-400 hover:to-teal-500"
-          >
-            Schedule a Demo
+          <Link to="/contact" className="btn-cockpit-primary mt-8">
+            Schedule Demo
           </Link>
         </div>
       </section>

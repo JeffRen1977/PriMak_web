@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Hero from "../components/Hero";
 import SectionHeading from "../components/SectionHeading";
 import FeatureCard from "../components/FeatureCard";
+import Panel from "../components/Panel";
 import { IconBolt, IconDocument, IconLink, IconShield, IconUsers } from "../components/icons";
 
 const audiences = [
@@ -62,15 +63,15 @@ export default function InstitutionsPage() {
   return (
     <>
       <Hero
-        eyebrow="Institutions"
+        eyebrow="SYS::INSTITUTIONS"
         title="Serving and distributing private investment capital at scale"
-        subtitle="A unified platform for a better private capital that connects asset managers, asset owners, and asset servicers intelligently."
-        primaryCta={{ label: "Get In Touch", to: "/contact" }}
-        secondaryCta={{ label: "Learn More", to: "/platform" }}
+        subtitle="A unified operating system for private capital — connecting asset managers, asset owners, and asset servicers intelligently."
+        primaryCta={{ label: "Connect", to: "/contact" }}
+        secondaryCta={{ label: "Platform Specs", to: "/platform" }}
         compact
       />
 
-      <section className="border-y border-slate-200 bg-slate-50 py-20">
+      <section className="cockpit-section cockpit-section-alt">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
             <div>
@@ -78,12 +79,12 @@ export default function InstitutionsPage() {
                 eyebrow="Private Investors"
                 title="Institutional quality for individual investors"
               />
-              <p className="mt-6 leading-relaxed text-slate-600">
+              <p className="cockpit-body mt-6">
                 Today&apos;s investors want more than just positive returns — digital
                 transformation, smarter data, more transparency, and faster service. We
                 help make these demands a reality.
               </p>
-              <p className="mt-4 leading-relaxed text-slate-600">
+              <p className="cockpit-body mt-4">
                 As a provider of private market solutions for individual investors, our
                 perpetual solutions bring institutional quality investments to individuals,
                 encompassing all private asset classes. With Partnership Enablement
@@ -92,63 +93,55 @@ export default function InstitutionsPage() {
                 institutions.
               </p>
             </div>
-            <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
-              <h3 className="text-xl font-semibold text-navy-900">
+            <Panel label="INTEL::PRIVATE_MARKETS">
+              <h3 className="font-display text-xl font-semibold text-navy-950">
                 Why Invest in Private Markets?
               </h3>
-              <p className="mt-2 font-medium text-teal-600">Power Growth, Create Value</p>
-              <p className="mt-4 text-sm leading-relaxed text-slate-600">
+              <p className="mt-2 font-mono text-xs uppercase tracking-wider text-teal-700">
+                Power Growth · Create Value
+              </p>
+              <p className="cockpit-body mt-4 text-sm">
                 Investing in private assets offers investors greater diversification and
                 the potential for enhanced long-term performance. With PriMarkA,
                 investors can access and participate in the $14T+ private markets — city
                 of opportunities, and home to the private companies shaping the future.
               </p>
-            </div>
+            </Panel>
           </div>
         </div>
       </section>
 
-      <section className="bg-white py-24">
+      <section className="cockpit-section">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <SectionHeading
-            centered
-            eyebrow="Designed for Institutions"
-            title="Built for Results"
-          />
-          <div className="mt-16 grid gap-8 lg:grid-cols-3">
-            {audiences.map((a) => (
-              <article
-                key={a.title}
-                className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm"
-              >
-                <h3 className="text-xl font-semibold text-navy-900">{a.title}</h3>
-                <p className="mt-2 text-sm font-medium text-teal-600">{a.tagline}</p>
-                <p className="mt-4 text-sm leading-relaxed text-slate-600">
-                  {a.description}
+          <SectionHeading centered eyebrow="Institutional Grade" title="Built for Results" />
+          <div className="mt-16 grid gap-4 lg:grid-cols-3">
+            {audiences.map((a, i) => (
+              <Panel key={a.title} label={`ROLE::0${i + 1}`} bodyClassName="p-6">
+                <h3 className="font-display text-lg font-semibold text-navy-950">{a.title}</h3>
+                <p className="mt-2 font-mono text-[11px] uppercase tracking-wider text-teal-700">
+                  {a.tagline}
                 </p>
-              </article>
+                <p className="cockpit-body mt-4 text-sm">{a.description}</p>
+              </Panel>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="border-t border-slate-200 bg-slate-50 py-24">
+      <section className="cockpit-section cockpit-section-alt">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <SectionHeading
-            eyebrow="Our Platform"
+            eyebrow="Platform Infrastructure"
             title="Alternative investments shouldn't require alternative infrastructure"
-            subtitle="PriMarkA delivers full transparency, visibility, accessibility, and control across your private investment journey — one platform with total efficiency, built to scale across the lifecycle."
+            subtitle="PriMarkA delivers full transparency, visibility, accessibility, and control across your private investment journey — one OS with total efficiency, built to scale across the lifecycle."
           />
-          <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {platformFeatures.map((f) => (
-              <FeatureCard key={f.title} {...f} />
+          <div className="mt-16 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {platformFeatures.map((f, i) => (
+              <FeatureCard key={f.title} {...f} index={i} />
             ))}
           </div>
           <div className="mt-12 text-center">
-            <Link
-              to="/platform"
-              className="inline-flex rounded-lg bg-gradient-to-r from-cyan-500 to-teal-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:from-cyan-400 hover:to-teal-500"
-            >
+            <Link to="/platform" className="btn-cockpit-primary">
               Explore Full Platform
             </Link>
           </div>
