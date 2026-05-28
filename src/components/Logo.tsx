@@ -10,9 +10,10 @@ export default function Logo({ className = "", height = 44 }: LogoProps) {
     <Link to="/" className={`inline-flex shrink-0 items-center ${className}`}>
       <img
         src="/logo.png"
-        alt="PriMarkA Financial Group Inc."
+        alt="PriMarkA"
         height={height}
-        className="h-auto w-auto max-w-[min(280px,70vw)] object-contain object-left"
+        width={Math.round(height * (1024 / 356))}
+        className="h-auto w-auto max-w-[min(220px,55vw)] rounded-sm object-contain object-left"
         style={{ height }}
       />
     </Link>
