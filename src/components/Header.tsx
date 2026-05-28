@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import Logo from "./Logo";
 
 const navLinks = [
-  { to: "/", label: "Investments", code: "INV", end: true },
+  { to: "/", label: "Overview", code: "OVR", end: true },
   { to: "/institutions", label: "Institutions", code: "INS" },
   { to: "/platform", label: "Platform", code: "PLT" },
   { to: "/about", label: "About", code: "ABT" },
@@ -14,7 +14,7 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-velocity-teal/10 bg-deep-space/90 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-2.5 lg:px-8">
         <Logo height={38} />
 
@@ -28,27 +28,27 @@ export default function Header() {
                 `cockpit-nav-link ${isActive ? "cockpit-nav-link-active" : ""}`
               }
             >
-              <span className="text-cyan-500/50">{code}</span> · {label}
+              <span className="text-velocity-teal/50">{code}</span> · {label}
             </NavLink>
           ))}
         </nav>
 
         <div className="hidden items-center gap-4 md:flex">
-          <span className="hidden items-center gap-2 font-mono text-[10px] uppercase tracking-wider text-slate-500 lg:flex">
-            <span className="signal-dot h-1.5 w-1.5 rounded-full bg-signal" />
+          <span className="hidden items-center gap-2 font-mono text-[10px] uppercase tracking-wider text-institutional-silver/50 lg:flex">
+            <span className="signal-dot h-1.5 w-1.5 rounded-full bg-velocity-teal" />
             OS v2.4 · Secure
           </span>
           <Link to="/contact" className="btn-cockpit-ghost py-2">
             Connect
           </Link>
           <Link to="/contact" className="btn-cockpit-primary py-2">
-            Enter OS
+            Early Access
           </Link>
         </div>
 
         <button
           type="button"
-          className="border border-slate-300 p-2 text-teal-700 md:hidden"
+          className="border border-velocity-teal/20 p-2 text-velocity-teal md:hidden"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
         >
@@ -63,7 +63,7 @@ export default function Header() {
       </div>
 
       {open && (
-        <nav className="border-t border-slate-200 bg-white px-6 py-4 md:hidden" aria-label="Mobile navigation">
+        <nav className="border-t border-velocity-teal/10 bg-deep-space px-6 py-4 md:hidden" aria-label="Mobile navigation">
           {navLinks.map(({ to, label, code, end }) => (
             <NavLink
               key={to}
@@ -72,7 +72,7 @@ export default function Header() {
               onClick={() => setOpen(false)}
               className={({ isActive }) =>
                 `block px-3 py-3 font-mono text-xs uppercase tracking-wider ${
-                  isActive ? "text-teal-800" : "text-slate-600"
+                  isActive ? "text-velocity-teal" : "text-institutional-silver/70"
                 }`
               }
             >
@@ -84,7 +84,7 @@ export default function Header() {
             onClick={() => setOpen(false)}
             className="btn-cockpit-primary mt-3 block w-full text-center"
           >
-            Enter OS
+            Early Access
           </Link>
         </nav>
       )}

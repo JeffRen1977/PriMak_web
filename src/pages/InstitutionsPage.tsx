@@ -1,28 +1,28 @@
 import { Link } from "react-router-dom";
 import Hero from "../components/Hero";
 import SectionHeading from "../components/SectionHeading";
-import FeatureCard from "../components/FeatureCard";
 import Panel from "../components/Panel";
+import AuditSection from "../components/AuditSection";
 import { IconBolt, IconDocument, IconLink, IconShield, IconUsers } from "../components/icons";
 
-const audiences = [
+const stakeholders = [
   {
     title: "Asset Owners",
     tagline: "Turning Data into Insights.",
     description:
-      "Every year, the Limited Partner investment landscape becomes more complex. PriMarkA's institutional-grade Agentic AI platform reduces operational risk and gives you total oversight of your private investments.",
+      "Limited Partner landscapes grow more complex every year. PriMarkA's institutional-grade agentic AI platform reduces operational risk and delivers total oversight across your private capital portfolio.",
   },
   {
-    title: "Alternative Asset Managers",
+    title: "Asset Managers",
     tagline: "Run the Business. Not the Software.",
     description:
-      "PriMarkA's digitized, end-to-end private investment journey brings scalability to private-fund distribution. Our purpose-built agentic infrastructure streamlines workflows, reduces operational burden, and enhances oversight.",
+      "Digitized, end-to-end private investment infrastructure brings scalability to fund operations. Purpose-built agentic workflows streamline distribution, reduce operational burden, and enhance oversight.",
   },
   {
     title: "Asset Servicers",
-    tagline: "Streamlining your Operations.",
+    tagline: "Streamlining Operations at Scale.",
     description:
-      "We empower asset servicers to scale with smarter decisions, faster workflows, and intelligent automation — whether you are a depositary, custodian, transfer agent, or advisor.",
+      "Empower depositaries, custodians, transfer agents, and advisors with intelligent automation — smarter decisions, faster workflows, and lean, transparent operations without compromising profitability.",
   },
 ];
 
@@ -31,31 +31,32 @@ const platformFeatures = [
     icon: <IconUsers />,
     title: "Digital Investor Onboarding",
     description:
-      "Onboard the entire investment journey at the speed of the market on one platform.",
+      "Onboard the entire investment journey at the speed of the market on one unified platform.",
   },
   {
     icon: <IconBolt />,
     title: "Centralized Portfolio Monitoring",
     description:
-      "Digital investor portal with clear access and superior insights to your private capital portfolio performance data.",
+      "Investor portal with clear access and superior insights to private capital portfolio performance data.",
   },
   {
     icon: <IconLink />,
     title: "Seamless Global Distribution",
     description:
-      "Designed for institutions. Built for results. Access a global network of distributors and reach a broader investor base.",
+      "Access a global network of distributors and reach institutional investor bases across jurisdictions.",
   },
   {
     icon: <IconShield />,
     title: "Automated KYC and Compliance",
     description:
-      "Streamline KYC/AML checks with automated regulatory processes to verify investors' identities.",
+      "Streamline KYC/AML checks with automated regulatory processes and built-in audit trails.",
+    alert: true,
   },
   {
     icon: <IconDocument />,
     title: "Intelligent Document Processing",
     description:
-      "Advanced centralized investor relations data visualization, e-signing of critical investment documents, and automated capital calls and distributions.",
+      "Centralized investor relations, e-signing of critical agreements, and automated capital calls and distributions.",
   },
 ];
 
@@ -64,61 +65,32 @@ export default function InstitutionsPage() {
     <>
       <Hero
         eyebrow="SYS::INSTITUTIONS"
-        title="Serving and distributing private investment capital at scale"
-        subtitle="A unified operating system for private capital — connecting asset managers, asset owners, and asset servicers intelligently."
+        title="Serving and distributing private capital at institutional scale"
+        subtitle="A unified operating system connecting asset managers, asset owners, and asset servicers — built for the full lifecycle, not a single asset class."
         primaryCta={{ label: "Connect", to: "/contact" }}
         secondaryCta={{ label: "Platform Specs", to: "/platform" }}
         compact
       />
 
-      <section className="cockpit-section cockpit-section-alt">
+      <section className="section-intelligence cockpit-section">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
-            <div>
-              <SectionHeading
-                eyebrow="Private Investors"
-                title="Institutional quality for individual investors"
-              />
-              <p className="cockpit-body mt-6">
-                Today&apos;s investors want more than just positive returns — digital
-                transformation, smarter data, more transparency, and faster service. We
-                help make these demands a reality.
-              </p>
-              <p className="cockpit-body mt-4">
-                As a provider of private market solutions for individual investors, our
-                perpetual solutions bring institutional quality investments to individuals,
-                encompassing all private asset classes. With Partnership Enablement
-                solutions, we provide specialist asset servicing, custody, payments, and
-                market services to asset managers, asset owners, and other financial
-                institutions.
-              </p>
-            </div>
-            <Panel label="INTEL::PRIVATE_MARKETS">
-              <h3 className="font-display text-xl font-semibold text-navy-950">
-                Why Invest in Private Markets?
-              </h3>
-              <p className="mt-2 font-mono text-xs uppercase tracking-wider text-teal-700">
-                Power Growth · Create Value
-              </p>
-              <p className="cockpit-body mt-4 text-sm">
-                Investing in private assets offers investors greater diversification and
-                the potential for enhanced long-term performance. With PriMarkA,
-                investors can access and participate in the $14T+ private markets — city
-                of opportunities, and home to the private companies shaping the future.
-              </p>
-            </Panel>
+          <div className="alignment-indicator max-w-3xl">
+            <SectionHeading
+              eyebrow="Institutional Focus"
+              title="Built for the stakeholders who move private capital"
+              subtitle="PriMarkA is infrastructure for the institutions that originate, allocate, service, and govern private capital — not a retail investment portal."
+            />
           </div>
         </div>
       </section>
 
-      <section className="cockpit-section">
+      <section className="section-vision cockpit-section">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <SectionHeading centered eyebrow="Institutional Grade" title="Built for Results" />
-          <div className="mt-16 grid gap-4 lg:grid-cols-3">
-            {audiences.map((a, i) => (
+          <div className="mt-4 grid gap-4 lg:grid-cols-3">
+            {stakeholders.map((a, i) => (
               <Panel key={a.title} label={`ROLE::0${i + 1}`} bodyClassName="p-6">
-                <h3 className="font-display text-lg font-semibold text-navy-950">{a.title}</h3>
-                <p className="mt-2 font-mono text-[11px] uppercase tracking-wider text-teal-700">
+                <h3 className="font-display text-lg font-semibold text-white">{a.title}</h3>
+                <p className="mt-2 font-mono text-[11px] uppercase tracking-wider text-velocity-teal">
                   {a.tagline}
                 </p>
                 <p className="cockpit-body mt-4 text-sm">{a.description}</p>
@@ -128,25 +100,41 @@ export default function InstitutionsPage() {
         </div>
       </section>
 
-      <section className="cockpit-section cockpit-section-alt">
+      <AuditSection>
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <SectionHeading
-            eyebrow="Platform Infrastructure"
-            title="Alternative investments shouldn't require alternative infrastructure"
-            subtitle="PriMarkA delivers full transparency, visibility, accessibility, and control across your private investment journey — one OS with total efficiency, built to scale across the lifecycle."
+            aligned
+            variant="audit"
+            eyebrow="Transparency · Auditability"
+            title="Institutional infrastructure demands institutional clarity"
+            subtitle="Complex data, compliance workflows, and cross-party reporting require clean, auditable surfaces. PriMarkA delivers full transparency, visibility, and control across the private investment lifecycle."
           />
-          <div className="mt-16 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {platformFeatures.map((f, i) => (
-              <FeatureCard key={f.title} {...f} index={i} />
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {platformFeatures.map((f) => (
+              <article
+                key={f.title}
+                className="border border-slate-200 bg-white p-6 shadow-sm"
+              >
+                <div className="mb-4 text-velocity-teal">{f.icon}</div>
+                <h3 className="font-display text-base font-semibold text-sovereign-navy">
+                  {f.title}
+                </h3>
+                <p className="cockpit-body-audit mt-3 text-sm">{f.description}</p>
+                {f.alert && (
+                  <p className="metric-alert mt-3 font-mono text-[10px] uppercase tracking-wider">
+                    ● Compliance Priority
+                  </p>
+                )}
+              </article>
             ))}
           </div>
           <div className="mt-12 text-center">
-            <Link to="/platform" className="btn-cockpit-primary">
+            <Link to="/platform" className="btn-cockpit-audit">
               Explore Full Platform
             </Link>
           </div>
         </div>
-      </section>
+      </AuditSection>
     </>
   );
 }

@@ -9,68 +9,71 @@ export default function AboutPage() {
       <Hero
         eyebrow="SYS::COMPANY"
         title="Opening the doors to the private market"
-        subtitle="Digitize. Transparent. Accessible. Grow."
+        subtitle="Digitize. Transparent. Accessible. At institutional scale."
         primaryCta={{ label: "Connect", to: "/contact" }}
         compact
       />
 
-      <section className="cockpit-section cockpit-section-alt">
+      <section className="section-intelligence cockpit-section">
         <div className="mx-auto max-w-3xl px-6 lg:px-8">
           <p className="cockpit-body text-lg">
-            PriMarkA Financial Group Inc. is an intelligence-native investment manager and
-            technology platform — offering end-to-end private capital solutions for any
-            business at any stage. Transforming how private capital is serviced and
-            distributed, and helping alternative investment managers achieve greater speed,
-            control, and scalable performance.
+            PriMarkA Financial Group Inc. is an intelligence-native technology platform —
+            the universal operating system for private capital. We transform how private
+            capital is serviced, distributed, and governed — helping asset managers, asset
+            owners, and asset servicers achieve greater speed, control, and scalable
+            performance across the full lifecycle.
           </p>
         </div>
       </section>
 
-      <section className="cockpit-section">
+      <section className="section-vision cockpit-section">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid gap-6 lg:grid-cols-2">
             <Panel label="MISSION::CORE" bodyClassName="p-8 lg:p-10">
-              <SectionHeading eyebrow="Our Mission" title="To be the unified platform for a better private capital" />
+              <SectionHeading
+                eyebrow="Our Mission"
+                title="The Universal OS for Private Capital"
+              />
               <p className="cockpit-body mt-6">
-                The company&apos;s mission is to bring transparency, visibility, and broad
-                accessibility to private asset investing — delivering an institutional-grade
-                experience with the speed and reliability of modern infrastructure.
+                To deliver institutional-grade infrastructure that unifies every participant
+                in the private capital ecosystem — bringing transparency, velocity, and
+                systematic certainty to onboarding, settlement, monitoring, and reporting.
               </p>
               <p className="cockpit-body mt-4">
-                With PriMarkA&apos;s unified investment platform, companies, institutions,
-                and individual investors gain a seamless, fully digital investment journey
-                that helps secure their future. We strive to automate onboarding, portfolio
-                oversight, payments, custody, and reporting from end to end.
+                We automate the operational backbone so asset managers, asset owners, and
+                asset servicers can focus on conviction, not complexity.
               </p>
             </Panel>
 
             <Panel label="VISION::FORWARD" bodyClassName="p-8 lg:p-10">
-              <SectionHeading eyebrow="Our Vision" title="Digital-first engine of global private capital" />
+              <SectionHeading
+                eyebrow="Our Vision"
+                title="Digital-first engine of global private capital"
+              />
               <p className="cockpit-body mt-6">
-                Grounded in today&apos;s market, we&apos;re building the future of private
-                investment technology infrastructure and offering convenient access to
-                investment opportunities all in one place.
+                A world where private capital operates on sovereign, high-velocity
+                infrastructure — where every transaction, covenant, and compliance event is
+                visible, auditable, and actionable in real time.
               </p>
               <p className="cockpit-body mt-4">
-                Through digitized alternative-asset and fund capabilities, we advance
-                frontier markets to provide liquidity, efficiency, and compliance,
-                establishing a global network that seamlessly connects participants and
-                catalyses their growth.
+                Through digitized fund capabilities and agentic intelligence, we advance
+                frontier markets to provide liquidity, efficiency, and compliance —
+                establishing a global network that connects participants and catalyses growth.
               </p>
             </Panel>
           </div>
         </div>
       </section>
 
-      <section className="cockpit-section cockpit-section-alt">
+      <section className="section-intelligence cockpit-section">
         <div className="mx-auto max-w-3xl px-6 text-center lg:px-8">
           <SectionHeading
             centered
-            eyebrow="Culture"
-            title="A culture of innovation"
-            subtitle="Solving complex challenges requires real intelligence. PriMarkA is built by people's imagination — embracing innovation and creating trust and growth for all our clients in everything they do."
+            eyebrow="Culture · Ends & Means"
+            title="Conviction through systematic engineering"
+            subtitle="We align ends and means — combining financial domain expertise, agentic intelligence, and institutional-grade engineering to solve complex private-market infrastructure at scale. Real intelligence. Real alignment. Real velocity."
           />
-          <Link to="/contact" className="btn-cockpit-ghost mt-10">
+          <Link to="/contact" className="btn-cockpit-primary mt-10">
             Join the OS
           </Link>
         </div>
