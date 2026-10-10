@@ -1,8 +1,8 @@
 const modules = [
-  { id: "MOD-01", name: "Onboarding & KYC", status: "ACTIVE", load: 78 },
-  { id: "MOD-02", name: "Portfolio Intel", status: "ACTIVE", load: 62 },
-  { id: "MOD-03", name: "Compliance Engine", status: "ACTIVE", load: 45 },
-  { id: "MOD-04", name: "Settlement Rail", status: "STANDBY", load: 12 },
+  { id: "MOD-01", name: "Onboarding & KYC", status: "PILOT", load: 78 },
+  { id: "MOD-02", name: "Portfolio Intel", status: "PLANNED", load: 62 },
+  { id: "MOD-03", name: "Compliance Engine", status: "PLANNED", load: 45 },
+  { id: "MOD-04", name: "Settlement Rail", status: "PLANNED", load: 12 },
 ];
 
 const bars = [40, 65, 55, 80, 72, 90, 68, 85, 78, 92, 88, 95];
@@ -61,7 +61,7 @@ export default function CockpitDashboard() {
                     style={{ width: `${m.load}%` }}
                   />
                 </span>
-                <span className={m.status === "ACTIVE" ? "text-velocity-teal" : "text-institutional-silver/40"}>
+                <span className={m.status === "PILOT" ? "text-amber-400" : m.status === "IN DEV" ? "text-sky-400" : "text-institutional-silver/60"}>
                   {m.status}
                 </span>
               </span>

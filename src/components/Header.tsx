@@ -6,6 +6,7 @@ const navLinks = [
   { to: "/", label: "Overview", code: "OVR", end: true },
   { to: "/institutions", label: "Institutions", code: "INS" },
   { to: "/platform", label: "Platform", code: "PLT" },
+  { to: "/services", label: "Services", code: "SVC" },
   { to: "/about", label: "About", code: "ABT" },
   { to: "/contact", label: "Contact", code: "CNT" },
 ];

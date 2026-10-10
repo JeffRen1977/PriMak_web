@@ -20,8 +20,8 @@ export default function AboutPage() {
             PriMarkA Financial Group Inc. is an intelligence-native technology platform —
             the universal operating system for private capital. We transform how private
             capital is serviced, distributed, and governed — helping asset managers, asset
-            owners, and asset servicers achieve greater speed, control, and scalable
-            performance across the full lifecycle.
+            owners, asset servicers, and asset consumers/borrowers achieve greater speed,
+            control, and scalable performance across the full lifecycle.
           </p>
         </div>
       </section>
@@ -32,28 +32,29 @@ export default function AboutPage() {
             <Panel label="MISSION::CORE" bodyClassName="p-8 lg:p-10">
               <SectionHeading
                 eyebrow="Our Mission"
-                title="The Universal OS for Private Capital"
+                title="Unified Platform for Private Capital"
               />
               <p className="cockpit-body mt-6">
-                To deliver institutional-grade infrastructure that unifies every participant
-                in the private capital ecosystem — bringing transparency, velocity, and
+                Deliver a Unified Platform that fuels Private Capital through
+                institutional-grade offering — bringing transparency, velocity, and
                 systematic certainty to onboarding, settlement, monitoring, and reporting.
               </p>
               <p className="cockpit-body mt-4">
-                We automate the operational backbone so asset managers, asset owners, and
-                asset servicers can focus on conviction, not complexity.
+                We automate the operational backbone so asset managers, asset owners,
+                asset servicers, and asset consumers/borrowers can focus on conviction,
+                not complexity.
               </p>
             </Panel>
 
             <Panel label="VISION::FORWARD" bodyClassName="p-8 lg:p-10">
               <SectionHeading
                 eyebrow="Our Vision"
-                title="Digital-first engine of global private capital"
+                title="The Universal Operating System for Private Capital"
               />
               <p className="cockpit-body mt-6">
-                A world where private capital operates on sovereign, high-velocity
-                infrastructure — where every transaction, covenant, and compliance event is
-                visible, auditable, and actionable in real time.
+                Establish PriMarkA as the Universal Operating System for Private Capital —
+                a frictionless Private Capital Hub that bridges the global liquidity gap and
+                becomes a high-velocity, transparent, digital-first engine of global wealth.
               </p>
               <p className="cockpit-body mt-4">
                 Through digitized fund capabilities and agentic intelligence, we advance
@@ -73,6 +74,41 @@ export default function AboutPage() {
             title="Conviction through systematic engineering"
             subtitle="We align ends and means — combining financial domain expertise, agentic intelligence, and institutional-grade engineering to solve complex private-market infrastructure at scale. Real intelligence. Real alignment. Real velocity."
           />
+        </div>
+      </section>
+
+      <section className="section-vision cockpit-section">
+        <div className="mx-auto max-w-4xl px-6 lg:px-8">
+          <SectionHeading
+            centered
+            eyebrow="Culture · 10C for 10X"
+            title="The 10 Commandments"
+            subtitle="Our cultural operating principles — the foundation that drives 10X performance across everything we build."
+          />
+          <div className="mt-12 grid gap-4 sm:grid-cols-2">
+            {[
+              { num: "I", title: "Conviction", desc: "Lead with unwavering belief in our mission and the value we create." },
+              { num: "II", title: "Clarity", desc: "Communicate with precision — eliminate ambiguity in every interaction." },
+              { num: "III", title: "Courage", desc: "Challenge the status quo and take bold, calculated action." },
+              { num: "IV", title: "Commitment", desc: "Deliver on promises with relentless execution and accountability." },
+              { num: "V", title: "Collaboration", desc: "Build together — across teams, roles, and geographies." },
+              { num: "VI", title: "Craftsmanship", desc: "Engineer with institutional-grade quality in everything we ship." },
+              { num: "VII", title: "Curiosity", desc: "Stay hungry for knowledge — question, learn, and innovate continuously." },
+              { num: "VIII", title: "Candor", desc: "Speak truth with respect — radical honesty accelerates progress." },
+              { num: "IX", title: "Customer Centricity", desc: "Every decision starts and ends with the institutional client." },
+              { num: "X", title: "Compounding", desc: "Think long-term — small, consistent improvements create exponential results." },
+            ].map((c) => (
+              <Panel key={c.num} label={`COMMANDMENT::${c.num}`} bodyClassName="p-6">
+                <h3 className="font-display text-base font-semibold text-white">{c.title}</h3>
+                <p className="cockpit-body mt-2 text-sm">{c.desc}</p>
+              </Panel>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-intelligence cockpit-section">
+        <div className="mx-auto max-w-3xl px-6 text-center lg:px-8">
           <Link to="/contact" className="btn-cockpit-primary mt-10">
             Join the OS
           </Link>

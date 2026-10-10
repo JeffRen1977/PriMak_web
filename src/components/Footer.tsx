@@ -9,9 +9,9 @@ export default function Footer() {
           <section className="lg:col-span-2">
             <Logo height={44} />
             <p className="mt-4 max-w-md text-sm leading-relaxed text-institutional-silver/70">
-              Institutional-grade infrastructure unifying asset managers, asset owners, and
-              asset servicers across the full private capital lifecycle — onboarding through
-              settlement, monitoring, and reporting.
+              Institutional-grade infrastructure unifying asset managers, asset owners,
+              asset servicers, and asset consumers/borrowers across the full private capital
+              lifecycle — onboarding through settlement, monitoring, and reporting.
             </p>
           </section>
 
@@ -23,6 +23,7 @@ export default function Footer() {
               <li><Link to="/" className="transition hover:text-velocity-teal">OVR · Overview</Link></li>
               <li><Link to="/institutions" className="transition hover:text-velocity-teal">INS · Institutions</Link></li>
               <li><Link to="/platform" className="transition hover:text-velocity-teal">PLT · Platform</Link></li>
+              <li><Link to="/services" className="transition hover:text-velocity-teal">SVC · Services</Link></li>
               <li><Link to="/about" className="transition hover:text-velocity-teal">ABT · About</Link></li>
             </ul>
           </nav>

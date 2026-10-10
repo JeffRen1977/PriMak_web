@@ -1,22 +1,35 @@
 import type { ReactNode } from "react";
 
+type Status = "Available" | "Early Access" | "Pilot" | "Preview" | "Planned" | "In Development" | "Future";
+
+const statusColor: Record<Status, string> = {
+  "Available": "text-velocity-teal",
+  "Early Access": "text-velocity-teal",
+  "Pilot": "text-amber-400",
+  "Preview": "text-amber-400",
+  "Planned": "text-institutional-silver/70",
+  "In Development": "text-sky-400",
+  "Future": "text-institutional-silver/50",
+};
+
 type FeatureCardProps = {
   icon: ReactNode;
   title: string;
   description: string;
   index?: number;
   alert?: boolean;
+  status?: Status;
 };
 
-export default function FeatureCard({ icon, title, description, index, alert }: FeatureCardProps) {
+export default function FeatureCard({ icon, title, description, index, alert, status = "Planned" }: FeatureCardProps) {
   const modId = index !== undefined ? `MOD-${String(index + 1).padStart(2, "0")}` : null;
 
   return (
     <article className="group cockpit-panel transition hover:border-velocity-teal/30 hover:shadow-[0_0_24px_rgba(0,245,255,0.06)]">
       <header className="cockpit-panel-label flex items-center justify-between">
         <span>{modId ?? "MODULE"}</span>
-        <span className={alert ? "metric-alert" : "text-velocity-teal"}>
-          {alert ? "PRIORITY" : "ACTIVE"}
+        <span className={alert ? "metric-alert" : statusColor[status]}>
+          {alert ? "PRIORITY" : status.toUpperCase()}
         </span>
       </header>
       <section className="p-6">

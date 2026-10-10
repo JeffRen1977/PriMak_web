@@ -24,6 +24,12 @@ const stakeholders = [
     description:
       "Empower depositaries, custodians, transfer agents, and advisors with intelligent automation — smarter decisions, faster workflows, and lean, transparent operations without compromising profitability.",
   },
+  {
+    title: "Asset Consumers & Borrowers",
+    tagline: "Accessing Capital with Confidence.",
+    description:
+      "Enable corporate borrowers, project sponsors, and capital consumers to engage seamlessly with private capital — transparent terms, streamlined access, and institutional-grade digital workflows from origination to funding.",
+  },
 ];
 
 const platformFeatures = [
@@ -66,7 +72,7 @@ export default function InstitutionsPage() {
       <Hero
         eyebrow="SYS::INSTITUTIONS"
         title="Serving and distributing private capital at institutional scale"
-        subtitle="A unified operating system connecting asset managers, asset owners, and asset servicers — built for the full lifecycle, not a single asset class."
+        subtitle="A unified operating system connecting asset managers, asset owners, asset servicers, and asset consumers/borrowers — built for the full lifecycle, not a single asset class."
         primaryCta={{ label: "Connect", to: "/contact" }}
         secondaryCta={{ label: "Platform Specs", to: "/platform" }}
         compact
@@ -86,7 +92,7 @@ export default function InstitutionsPage() {
 
       <section className="section-vision cockpit-section">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mt-4 grid gap-4 lg:grid-cols-3">
+          <div className="mt-4 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
             {stakeholders.map((a, i) => (
               <Panel key={a.title} label={`ROLE::0${i + 1}`} bodyClassName="p-6">
                 <h3 className="font-display text-lg font-semibold text-white">{a.title}</h3>

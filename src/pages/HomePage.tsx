@@ -11,24 +11,28 @@ const capabilities = [
     title: "Unified Lifecycle Visibility",
     description:
       "360° oversight across onboarding, origination, settlement, monitoring, and reporting — one command layer for every participant in private capital.",
+    status: "Planned" as const,
   },
   {
     icon: <IconGlobe />,
     title: "Cross-Party Orchestration",
     description:
-      "Connect asset managers, asset owners, and asset servicers on a single intelligent infrastructure — eliminating siloed systems and manual handoffs.",
+      "Connect asset managers, asset owners, asset servicers, and asset consumers/borrowers on a single intelligent infrastructure — eliminating siloed systems and manual handoffs.",
+    status: "Planned" as const,
   },
   {
     icon: <IconCpu />,
     title: "Agentic Intelligence Layer",
     description:
       "Purpose-built AI orchestration that automates workflows, converts natural-language instructions into execution, and scales institutional operations.",
+    status: "In Development" as const,
   },
   {
     icon: <IconChart />,
     title: "Real-Time Portfolio Intelligence",
     description:
       "Interactive dashboards and deep analytical insights delivering accurate, comprehensive performance data across the entire investment footprint.",
+    status: "Planned" as const,
   },
 ];
 
@@ -38,7 +42,7 @@ export default function HomePage() {
       <Hero
         eyebrow="SYS::PRIVATE_CAPITAL_OS"
         title="The Universal OS for Private Capital"
-        subtitle="Institutional-grade infrastructure connecting asset managers, asset owners, and asset servicers — one operating system from onboarding through settlement, monitoring, and reporting."
+        subtitle="Institutional-grade infrastructure connecting asset managers, asset owners, asset servicers, and asset consumers/borrowers — one operating system from onboarding through settlement, monitoring, and reporting."
         primaryCta={{ label: "Early Access", to: "/contact" }}
         secondaryCta={{ label: "Explore Platform", to: "/platform" }}
         showDashboard
@@ -70,9 +74,9 @@ export default function HomePage() {
                 One platform. Every participant. Total alignment.
               </p>
               <p className="cockpit-body mt-4 text-sm">
-                PriMarkA unifies companies, asset managers, asset owners, and asset servicers
-                through a single sovereign infrastructure — the entry portal into the
-                operating system itself.
+                PriMarkA unifies companies, asset managers, asset owners, asset servicers,
+                and asset consumers/borrowers through a single sovereign infrastructure — the
+                entry portal into the operating system itself.
               </p>
               <Link to="/contact" className="btn-cockpit-primary mt-6">
                 Request Access
