@@ -67,6 +67,65 @@ export default function AboutPage() {
       </section>
 
       <section className="section-intelligence cockpit-section">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <SectionHeading
+            centered
+            eyebrow="TEAM::PARTNERS"
+            title="PriMarkA Partners"
+            subtitle="A multi-disciplinary powerhouse combining capital market enterprise architecture, fund structuring and systematic risk governance, industrial OT/IoT collateral telemetry, and on-device edge AI hardware acceleration."
+          />
+          <div className="mt-12 grid gap-6 lg:grid-cols-2">
+            {[
+              {
+                name: "Darko Zivkovic",
+                titles: "CEO, CIO, CPO",
+                domain: "Product and Service Leadership and Management, M&A, Business & Enterprise Architecture",
+                expertise: "Business & Enterprise architecture, Product and Service leadership, Operating model and M&A specialist for stock exchanges, regulatory bodies (LSEG, TMX, CSA, CIRO).",
+                focus: "Product and Services owner, Platform business architecture, TOM designer, Change leader, Tokenization, blockchain, quantum and sovereign AI enabler.",
+              },
+              {
+                name: "Dr. Jianfeng (Jeff) Ren",
+                titles: "CRIO, Head of Engineering",
+                domain: "Edge AI Acceleration & Computer Vision",
+                expertise: "Dual Ph.D. EE, computational vision, edge hardware quantization, and spatial/autonomous AI algorithms (Google, Qualcomm).",
+                focus: "On-device and sovereign AI acceleration, spatial perception models, and automated asset inspection engines. Research, Innovation and IP protection.",
+              },
+              {
+                name: "Hasni Guettaf",
+                titles: "COO, CTO, CISO",
+                domain: "Industrial AI and IoT, Information and Operation Technologies, Quantum & Cyber Resilience",
+                expertise: "AI, Quantum encryption, Smart Manufacturing / IIoT (CESMII & 4.0 Solutions), Unified Namespace (UNS), edge OT/IT convergence, and IEC 62443 industrial cybersecurity.",
+                focus: "Real-time asset monitoring, physical collateral telemetry, Industrial IoT data pipeline, Platform architecture, Technology innovation, deployment and support.",
+              },
+              {
+                name: "Guy-François Yebele-Nkumu",
+                titles: "CMO, COS, CGRO",
+                domain: "Fund Structuring & Systematic Risk, Business Development",
+                expertise: "Alternative asset management, Multi-asset systematic trading, Cross-border M&A, Regulatory governance and compliance.",
+                focus: "Fund structuring, prime brokerage integration, and institutional risk/compliance frameworks, marketing, talent scouting.",
+              },
+            ].map((p) => (
+              <Panel key={p.name} label={`PARTNER::${p.name.replace(/^Dr\.\s*/, "").split(" ")[0].toUpperCase()}`} bodyClassName="p-8">
+                <h3 className="font-display text-lg font-semibold text-white">
+                  {p.name}
+                  <span className="text-cyan-400">, {p.titles}</span>
+                </h3>
+                <p className="cockpit-body mt-1 text-sm italic text-slate-300">{p.domain}</p>
+                <p className="cockpit-body mt-4 text-sm">
+                  <span className="font-semibold text-cyan-400">Core Expertise: </span>
+                  {p.expertise}
+                </p>
+                <p className="cockpit-body mt-3 text-sm">
+                  <span className="font-semibold text-cyan-400">PriMarkA Focus: </span>
+                  {p.focus}
+                </p>
+              </Panel>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-vision cockpit-section">
         <div className="mx-auto max-w-3xl px-6 text-center lg:px-8">
           <SectionHeading
             centered
