@@ -71,7 +71,7 @@ export default function CockpitDashboard() {
 
         <footer className="flex items-center justify-between border-t border-velocity-teal/10 pt-3 text-[10px] text-institutional-silver/40">
           <span>SYS::PRIVATE_CAPITAL_OS</span>
-          <span>v2.4.1 · ENCRYPTED</span>
+          <span>v1.2 · ENCRYPTED</span>
         </footer>
       </section>
     </aside>

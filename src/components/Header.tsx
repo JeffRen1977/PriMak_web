@@ -3,12 +3,12 @@ import { Link, NavLink } from "react-router-dom";
 import Logo from "./Logo";
 
 const navLinks = [
-  { to: "/", label: "Overview", code: "OVR", end: true },
-  { to: "/institutions", label: "Institutions", code: "INS" },
-  { to: "/platform", label: "Platform", code: "PLT" },
-  { to: "/services", label: "Services", code: "SVC" },
-  { to: "/about", label: "About", code: "ABT" },
-  { to: "/contact", label: "Contact", code: "CNT" },
+  { to: "/", label: "Overview", end: true },
+  { to: "/institutions", label: "Institutions" },
+  { to: "/platform", label: "Platform" },
+  { to: "/services", label: "Services" },
+  { to: "/about", label: "About" },
+  { to: "/contact", label: "Contact" },
 ];
 
 export default function Header() {
@@ -20,7 +20,7 @@ export default function Header() {
         <Logo height={38} />
 
         <nav className="hidden items-center gap-0.5 md:flex" aria-label="Main navigation">
-          {navLinks.map(({ to, label, code, end }) => (
+          {navLinks.map(({ to, label, end }) => (
             <NavLink
               key={to}
               to={to}
@@ -29,7 +29,7 @@ export default function Header() {
                 `cockpit-nav-link ${isActive ? "cockpit-nav-link-active" : ""}`
               }
             >
-              <span className="text-velocity-teal/50">{code}</span> · {label}
+              {label}
             </NavLink>
           ))}
         </nav>
@@ -37,7 +37,7 @@ export default function Header() {
         <div className="hidden items-center gap-4 md:flex">
           <span className="hidden items-center gap-2 font-mono text-[10px] uppercase tracking-wider text-institutional-silver/50 lg:flex">
             <span className="signal-dot h-1.5 w-1.5 rounded-full bg-velocity-teal" />
-            OS v2.4 · Secure
+            OS v1.2 · Secure
           </span>
           <Link to="/contact" className="btn-cockpit-ghost py-2">
             Connect
@@ -65,7 +65,7 @@ export default function Header() {
 
       {open && (
         <nav className="border-t border-velocity-teal/10 bg-deep-space px-6 py-4 md:hidden" aria-label="Mobile navigation">
-          {navLinks.map(({ to, label, code, end }) => (
+          {navLinks.map(({ to, label, end }) => (
             <NavLink
               key={to}
               to={to}
@@ -77,7 +77,7 @@ export default function Header() {
                 }`
               }
             >
-              {code} · {label}
+              {label}
             </NavLink>
           ))}
           <Link
