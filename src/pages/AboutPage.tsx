@@ -23,6 +23,18 @@ export default function AboutPage() {
             owners, asset servicers, and asset consumers/borrowers achieve greater speed,
             control, and scalable performance across the full lifecycle.
           </p>
+
+          <div className="mt-10">
+            <div className="relative w-full overflow-hidden rounded-lg border border-velocity-teal/20" style={{ paddingBottom: "56.25%" }}>
+              <iframe
+                className="absolute inset-0 h-full w-full"
+                src="https://www.youtube.com/embed/W937grh88sE"
+                title="PriMarkA — The Universal OS for Private Capital"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+          </div>
         </div>
       </section>
 
