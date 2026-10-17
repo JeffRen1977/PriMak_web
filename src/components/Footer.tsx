@@ -24,8 +24,8 @@ export default function Footer() {
               <li><Link to="/institutions" className="transition hover:text-velocity-teal">INS · Institutions</Link></li>
               <li><Link to="/platform" className="transition hover:text-velocity-teal">PLT · Platform</Link></li>
               <li><Link to="/services" className="transition hover:text-velocity-teal">SVC · Services</Link></li>
-              <li><Link to="/about" className="transition hover:text-velocity-teal">ABT · About</Link></li>
               <li><Link to="/story" className="transition hover:text-velocity-teal">STR · Story</Link></li>
+              <li><Link to="/about" className="transition hover:text-velocity-teal">ABT · About</Link></li>
             </ul>
           </nav>
 

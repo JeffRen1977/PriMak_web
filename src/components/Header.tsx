@@ -7,8 +7,8 @@ const navLinks = [
   { to: "/institutions", label: "Institutions" },
   { to: "/platform", label: "Platform" },
   { to: "/services", label: "Services" },
-  { to: "/about", label: "About" },
   { to: "/story", label: "Story" },
+  { to: "/about", label: "About" },
 ];
 
 export default function Header() {
