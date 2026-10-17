@@ -5,6 +5,7 @@ import InstitutionsPage from "./pages/InstitutionsPage";
 import PlatformPage from "./pages/PlatformPage";
 import ServicesPage from "./pages/ServicesPage";
 import AboutPage from "./pages/AboutPage";
+import StoryPage from "./pages/StoryPage";
 import ContactPage from "./pages/ContactPage";
 
 export default function App() {
@@ -16,6 +17,7 @@ export default function App() {
         <Route path="platform" element={<PlatformPage />} />
         <Route path="services" element={<ServicesPage />} />
         <Route path="about" element={<AboutPage />} />
+        <Route path="story" element={<StoryPage />} />
         <Route path="contact" element={<ContactPage />} />
       </Route>
     </Routes>

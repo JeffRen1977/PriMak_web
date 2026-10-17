@@ -8,7 +8,7 @@ const navLinks = [
   { to: "/platform", label: "Platform" },
   { to: "/services", label: "Services" },
   { to: "/about", label: "About" },
-  { to: "/contact", label: "Contact" },
+  { to: "/story", label: "Story" },
 ];
 
 export default function Header() {
@@ -35,15 +35,18 @@ export default function Header() {
         </nav>
 
         <div className="hidden items-center gap-4 md:flex">
+          <Link to="/contact" className="btn-cockpit-ghost py-2">
+            Connect
+          </Link>
           <span className="hidden items-center gap-2 font-mono text-[10px] uppercase tracking-wider text-institutional-silver/50 lg:flex">
             <span className="signal-dot h-1.5 w-1.5 rounded-full bg-velocity-teal" />
             OS v1.2 · Secure
           </span>
-          <Link to="/contact" className="btn-cockpit-ghost py-2">
-            Connect
-          </Link>
+          <button disabled className="btn-cockpit-ghost py-2 opacity-50 cursor-default">
+            Log In
+          </button>
           <Link to="/contact" className="btn-cockpit-primary py-2">
-            Early Access
+            Sign Up
           </Link>
         </div>
 
@@ -83,9 +86,16 @@ export default function Header() {
           <Link
             to="/contact"
             onClick={() => setOpen(false)}
+            className="btn-cockpit-ghost mt-3 block w-full text-center"
+          >
+            Connect
+          </Link>
+          <Link
+            to="/contact"
+            onClick={() => setOpen(false)}
             className="btn-cockpit-primary mt-3 block w-full text-center"
           >
-            Early Access
+            Sign Up
           </Link>
         </nav>
       )}

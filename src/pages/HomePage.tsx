@@ -43,7 +43,7 @@ export default function HomePage() {
         eyebrow="SYS::PRIVATE_CAPITAL_OS"
         title="The Universal OS for Private Capital"
         subtitle="Institutional-grade infrastructure connecting asset managers, asset owners, asset servicers, and asset consumers/borrowers — one operating system from onboarding through settlement, monitoring, and reporting."
-        primaryCta={{ label: "Early Access", to: "/contact" }}
+        primaryCta={{ label: "Sign Up", to: "/contact" }}
         secondaryCta={{ label: "Explore Platform", to: "/platform" }}
         showDashboard
         gradient

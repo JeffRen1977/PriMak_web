@@ -23,18 +23,6 @@ export default function AboutPage() {
             owners, asset servicers, and asset consumers/borrowers achieve greater speed,
             control, and scalable performance across the full lifecycle.
           </p>
-
-          <div className="mt-10">
-            <div className="relative w-full overflow-hidden rounded-lg border border-velocity-teal/20" style={{ paddingBottom: "56.25%" }}>
-              <iframe
-                className="absolute inset-0 h-full w-full"
-                src="https://www.youtube.com/embed/W937grh88sE"
-                title="PriMarkA — The Universal OS for Private Capital"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-            </div>
-          </div>
         </div>
       </section>
 
@@ -174,6 +162,27 @@ export default function AboutPage() {
                 <p className="cockpit-body mt-2 text-sm">{c.desc}</p>
               </Panel>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-intelligence cockpit-section">
+        <div className="mx-auto max-w-3xl px-6 lg:px-8">
+          <SectionHeading
+            centered
+            eyebrow="MEDIA::OVERVIEW"
+            title="PriMarkA in Motion"
+          />
+          <div className="mt-10">
+            <div className="relative w-full overflow-hidden rounded-lg border border-velocity-teal/20" style={{ paddingBottom: "56.25%" }}>
+              <iframe
+                className="absolute inset-0 h-full w-full"
+                src="https://www.youtube.com/embed/zIAhOpK7RXU"
+                title="PriMarkA — The Universal OS for Private Capital"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
           </div>
         </div>
       </section>
