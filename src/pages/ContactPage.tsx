@@ -18,10 +18,29 @@ const inputClass =
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState("");
+  const [sending, setSending] = useState(false);
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setSubmitted(true);
+    setSending(true);
+    setError("");
+    try {
+      const res = await fetch("https://formspree.io/f/xaeqvrkw", {
+        method: "POST",
+        body: new FormData(e.currentTarget),
+        headers: { Accept: "application/json" },
+      });
+      if (res.ok) {
+        setSubmitted(true);
+      } else {
+        setError("Submission failed. Please try again or email info@primarka.com.");
+      }
+    } catch {
+      setError("Network error. Please try again or email info@primarka.com.");
+    } finally {
+      setSending(false);
+    }
   }
 
   return (
@@ -132,8 +151,12 @@ export default function ContactPage() {
                   </span>
                 </label>
 
-                <button type="submit" className="btn-cockpit-primary w-full sm:w-auto">
-                  Transmit
+                {error && (
+                  <p className="text-sm text-red-400">{error}</p>
+                )}
+
+                <button type="submit" disabled={sending} className="btn-cockpit-primary w-full sm:w-auto disabled:opacity-50">
+                  {sending ? "Transmitting…" : "Transmit"}
                 </button>
               </form>
             </Panel>
