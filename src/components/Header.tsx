@@ -42,12 +42,6 @@ export default function Header() {
             <span className="signal-dot h-1.5 w-1.5 rounded-full bg-velocity-teal" />
             OS v1.2 · Secure
           </span>
-          <button disabled className="btn-cockpit-ghost py-2 opacity-50 cursor-default">
-            Log In
-          </button>
-          <Link to="/contact" className="btn-cockpit-primary py-2">
-            Sign Up
-          </Link>
         </div>
 
         <button
@@ -86,16 +80,9 @@ export default function Header() {
           <Link
             to="/contact"
             onClick={() => setOpen(false)}
-            className="btn-cockpit-ghost mt-3 block w-full text-center"
-          >
-            Connect
-          </Link>
-          <Link
-            to="/contact"
-            onClick={() => setOpen(false)}
             className="btn-cockpit-primary mt-3 block w-full text-center"
           >
-            Sign Up
+            Connect
           </Link>
         </nav>
       )}
