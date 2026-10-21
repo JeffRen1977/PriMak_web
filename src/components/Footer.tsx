@@ -48,6 +48,11 @@ export default function Footer() {
           PriMarkA Financial Group | The Universal OS for Private Capital | Institutional-Grade Infrastructure
         </p>
 
+        <div className="mt-4 text-center text-xs leading-relaxed text-institutional-silver/50">
+          <p>Head Office: 20 Prince Edward Blvd., Markham, ON, Canada, L3T 7G3</p>
+          <p className="mt-1">Offices in Montreal, Vancouver, San Diego</p>
+        </div>
+
         <div className="mt-6 flex flex-col items-center justify-between gap-4 font-mono text-[10px] uppercase tracking-wider text-institutional-silver/40 sm:flex-row">
           <p>&copy; {new Date().getFullYear()} PriMarkA Financial Group Inc.</p>
           <p className="flex items-center gap-2">
